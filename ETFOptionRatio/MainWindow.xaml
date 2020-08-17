@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ETFOptionRatio"
         mc:Ignorable="d"
-        Title="EFT期权比计算器" Height="256.304" Width="536.587" Icon="ETFOptionRatio.ico" WindowStartupLocation="CenterScreen">
+        Title="300EFT期权比计算器" Height="256.304" Width="536.587" Icon="ETFOptionRatio.ico" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -20,6 +20,7 @@
         <Label Content="" HorizontalAlignment="Left" Margin="133,95,0,0" VerticalAlignment="Top" Width="66" x:Name ="lblRenGu"/>
         <Label Content="比值" HorizontalAlignment="Left" Margin="85,125,0,0" VerticalAlignment="Top" Width="43" />
         <Label Content="" HorizontalAlignment="Left" Margin="133,125,0,0" VerticalAlignment="Top" Width="66" x:Name ="lblRate"/>
+        <Label Content="公式：300ETF期权比 = 认沽期权总持仓量 / 认购期权总持仓量" HorizontalAlignment="Left" Margin="85,176,0,0" VerticalAlignment="Top" Width="352" />
 
     </Grid>
 </Window>
