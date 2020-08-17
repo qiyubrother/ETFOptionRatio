@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ETFOptionRatio"
         mc:Ignorable="d"
-        Title="300EFT期权比计算器" Height="256.304" Width="536.587" Icon="ETFOptionRatio.ico" WindowStartupLocation="CenterScreen">
+        Title="300EFT期权比计算器" Height="306.304" Width="536.587" Icon="ETFOptionRatio.ico" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -14,13 +14,19 @@
         </Grid.ColumnDefinitions>
         <WebBrowser HorizontalAlignment="Left" Width="1198" Name="web" Visibility="Hidden"/>
         <Button Content="开始计算" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Name="AutoStart" Click="AutoStart_Click"/>
-        <Label Content="认购" HorizontalAlignment="Left" Margin="85,65,0,0" VerticalAlignment="Top" Width="43"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="133,65,0,0" VerticalAlignment="Top" Width="66" Name ="lblRenGou"/>
-        <Label Content="认沽" HorizontalAlignment="Left" Margin="85,95,0,0" VerticalAlignment="Top" Width="43" />
-        <Label Content="" HorizontalAlignment="Left" Margin="133,95,0,0" VerticalAlignment="Top" Width="66" x:Name ="lblRenGu"/>
-        <Label Content="比值" HorizontalAlignment="Left" Margin="85,125,0,0" VerticalAlignment="Top" Width="43" />
-        <Label Content="" HorizontalAlignment="Left" Margin="133,125,0,0" VerticalAlignment="Top" Width="66" x:Name ="lblRate"/>
-        <Label Content="公式：300ETF期权比 = 认沽期权总持仓量 / 认购期权总持仓量" HorizontalAlignment="Left" Margin="85,176,0,0" VerticalAlignment="Top" Width="352" />
+        <Label Content="认购" HorizontalAlignment="Left" Margin="21,220,0,0" VerticalAlignment="Top" Width="43"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="69,220,0,0" VerticalAlignment="Top" Width="66" Name ="lblRenGou"/>
+        <Label Content="认沽" HorizontalAlignment="Left" Margin="142,220,0,0" VerticalAlignment="Top" Width="43" />
+        <Label Content="" HorizontalAlignment="Left" Margin="190,220,0,0" VerticalAlignment="Top" Width="66" x:Name ="lblRenGu"/>
+        <Label Content="比值" HorizontalAlignment="Left" Margin="265,220,0,0" VerticalAlignment="Top" Width="43" />
+        <Label Content="" HorizontalAlignment="Left" Margin="313,220,0,0" VerticalAlignment="Top" Width="66" x:Name ="lblRate"/>
+        <Label Content="公式：300ETF期权比 = 认沽期权总持仓量 / 认购期权总持仓量" HorizontalAlignment="Left" Margin="21,47,0,0" VerticalAlignment="Top" Width="352" />
+        <Label Content="&gt;1.5：市场过于乐观，短线过热。" HorizontalAlignment="Left" Margin="59,77,0,0" VerticalAlignment="Top" Width="340"/>
+        <Label Content="&gt;1.2：主力积极买进，行情看涨或单边看涨。" HorizontalAlignment="Left" Margin="59,100,0,0" VerticalAlignment="Top" Width="340"/>
+        <Label Content="&gt;1  ：主力买进，行情看涨。" HorizontalAlignment="Left" Margin="59,125,0,0" VerticalAlignment="Top" Width="340"/>
+        <Label Content="&lt;0.8：市场较为谨慎，偏看空。" HorizontalAlignment="Left" Margin="59,150,0,0" VerticalAlignment="Top" Width="340"/>
+        <Label Content="&lt;0.6：市场过度悲观，否极泰来，应该逢低买进股票。" HorizontalAlignment="Left" Margin="59,175,0,0" VerticalAlignment="Top" Width="340"/>
+        <Label Content="说明：" HorizontalAlignment="Left" Margin="21,77,0,0" VerticalAlignment="Top" Width="43"/>
 
     </Grid>
 </Window>
