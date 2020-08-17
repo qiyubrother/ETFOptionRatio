@@ -55,7 +55,7 @@ namespace ETFOptionRatio
                     rowIndex++;
                     continue;
                 }
-                var cjl = row.children[6].innerText.ToString(); // 成交量
+                var cjl = row.children[8].innerText.ToString(); // 持仓量
 
                 if (taskNo == 1) 
                 {
@@ -116,7 +116,9 @@ namespace ETFOptionRatio
             AutoStart.IsEnabled = false;
             lstRenGou.Clear();
             lstRenGu.Clear();
-            if (taskNo > 2)
+            web.Navigate("http://quote.eastmoney.com/center/gridlist.html#options_sh50etf_call");
+
+            if (taskNo >= 2)
             {
                 taskNo = 1;
                 lblRenGou.Content = string.Empty;
@@ -125,7 +127,8 @@ namespace ETFOptionRatio
 
             }
             workThread = new Thread(new ThreadStart(new Action(()=> {
-                while(taskNo == 1)
+                Thread.Sleep(2000);
+                while (taskNo == 1)
                 {
                     Dispatcher.Invoke(new Action(()=> GetData_Click(null, null)));
                     Thread.Sleep(1800);
@@ -191,7 +194,7 @@ namespace ETFOptionRatio
                     SumRenGu += Convert.ToInt32(item);
                 }
             }
-            var rate = 1.0f * SumRenGou / SumRenGu;
+            var rate = Math.Round(1.0f * SumRenGu / SumRenGou, 2);
 
             lblRenGou.Content = SumRenGou.ToString();
             lblRenGu.Content = SumRenGu.ToString();
