@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ETFOptionRatio"
         mc:Ignorable="d"
-        Title="EFT期权比计算器" Height="256.304" Width="536.587" Icon="ETFOptionRatio.ico">
+        Title="EFT期权比计算器" Height="256.304" Width="536.587" Icon="ETFOptionRatio.ico" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
